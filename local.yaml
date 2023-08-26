@@ -1,6 +1,6 @@
 - hosts: localhost
   vars:
-    source_key: "./.ssh/ed25519"
+    source_key: "./.ssh/id_ed25519"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
     projects: "{{ lookup('env', 'HOME') }}/projects"
   pre_tasks:
