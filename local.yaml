@@ -9,8 +9,10 @@
     when: ansible_facts['os_family'] == "Darwin"
     ansible.builtin.command: echo "Beginning MacOS Setup"
   tasks:
+    - include: tasks/brew.yml
     - include: tasks/ssh.yml
     - include: tasks/nvim.yml
+
   #   apt:
   #     force_apt_get: true
   #     update_cache: true

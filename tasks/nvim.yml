@@ -38,3 +38,9 @@
   tags:
     - install
     - neovim
+- name: Install Neovim MacOS
+  shell: brew install neovim
+  when: ansible_facts['os_family'] == 'Darwin'
+  tags:
+    - install
+    - neovim
